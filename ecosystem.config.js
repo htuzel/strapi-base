@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'strapi',
-    cwd: '/home/forge/default',
+    cwd: '/home/forge/cms.tagmetrica.com',
     script: 'npm',
     args: 'start',
     exec_mode: "cluster",
