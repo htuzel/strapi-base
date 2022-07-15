@@ -1,18 +1,20 @@
+const fs = require('fs');
+const mysql = require('mysql2');
+
+
 module.exports = ({ env }) => ({
-  defaultConnection: 'default',
-  connections: {
-    default: {
-      connector: 'bookshelf',
-      settings: {
-        client: 'postgres',
-        host: env('DATABASE_HOST', '127.0.0.1'),
-        port: env.int('DATABASE_PORT', 5432),
-        database: env('DATABASE_NAME', 'my-strapi-project'),
-        username: env('DATABASE_USERNAME', 'testing'),
-        password: env('DATABASE_PASSWORD', 'testing'),
-        ssl: env.bool('DATABASE_SSL', false),
+  connection: {
+    client: 'mysql2',
+    connection: {
+      host: env('DATABASE_HOST', 'db-mysql-fra1-get-do-user-3818724-0.b.db.ondigitalocean.com'),
+      port: env.int('DATABASE_PORT', 25060),
+      database: env('DATABASE_NAME', 'strapi'),
+      user: env('DATABASE_USERNAME', 'doadmin'),
+      password: env('DATABASE_PASSWORD', 'VgcvGfeaDS5IWE4b'),
+      ssl: {
+        ca: fs.readFileSync(`${__dirname}/ca-certificate.crt`).toString(),
       },
-      options: {}
     },
+    debug: false,
   },
 });

@@ -1,0 +1,22 @@
+diff --git a/node_modules/@strapi/database/lib/dialects/index.js b/node_modules/@strapi/database/lib/dialects/index.js
+index 2cdb270..81c7efe 100644
+--- a/node_modules/@strapi/database/lib/dialects/index.js
++++ b/node_modules/@strapi/database/lib/dialects/index.js
+@@ -6,6 +6,8 @@ const getDialectClass = client => {
+       return require('./postgresql');
+     case 'mysql':
+       return require('./mysql');
++    case 'mysql2':
++      return require('./mysql');
+     case 'sqlite':
+       return require('./sqlite');
+     default:
+@@ -14,7 +16,7 @@ const getDialectClass = client => {
+ };
+ 
+ const getDialect = db => {
+-  const { client } = db.config.connection;
++  const {client} = db.config.connection;
+ 
+   const constructor = getDialectClass(client);
+   const dialect = new constructor(db);
