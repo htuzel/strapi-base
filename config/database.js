@@ -10,8 +10,8 @@ module.exports = ({ env }) => ({
       port: env.int('DATABASE_PORT', 25060),
       database: env('DATABASE_NAME', 'strapi'),
       user: env('DATABASE_USERNAME', 'doadmin'),
-      password: env('DATABASE_PASSWORD', 'VgcvGfeaDS5IWE4b')
-    },
-    debug: false,
+      password: env('DATABASE_PASSWORD', 'VgcvGfeaDS5IWE4b'),
+      ssl: env('DATABASE_SSL', true)
+    }
   },
 });
