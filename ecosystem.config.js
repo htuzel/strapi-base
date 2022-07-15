@@ -16,7 +16,8 @@ module.exports = {
       APP_KEYS: 'gZMvdFpMZtTAPw/UKnSrYg==,BGL70ZOdy+5+KqWJmKAp1Q==,Ridf9FBCVV5Bzl34w0GaDQ==,6eG411y3A/z3BDKd3cWxNQ==',
       API_TOKEN_SALT: 'HzLbgNpwmWWtkl6oYkkaDw==',
       ADMIN_JWT_SECRET: 'R9S/AMcXQKFt1XYnDrLAHg==',
-      JWT_SECRET: 'zkSyqIEoAjzycpOadGTn3w=='
+      JWT_SECRET: 'zkSyqIEoAjzycpOadGTn3w==',
+      STRAPI_BASE_URL: 'https://cms.tagmetrica.com'
     },
   }, ],
 };
