@@ -4,6 +4,7 @@ module.exports = {
     cwd: '/home/forge/default',
     script: 'npm',
     args: 'start',
+    exec_mode: "cluster",
     env: {
       NODE_ENV: 'production',
       DATABASE_HOST: 'private-db-mysql-fra1-get-do-user-3818724-0.b.db.ondigitalocean.com', // database endpoint
