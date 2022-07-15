@@ -5,7 +5,7 @@ module.exports = {
     script: 'npm',
     args: 'start',
     exec_mode: "cluster",
-    env: {
+    env_production: {
       NODE_ENV: 'production',
       DATABASE_HOST: 'private-db-mysql-fra1-get-do-user-3818724-0.b.db.ondigitalocean.com', // database endpoint
       DATABASE_PORT: '25060',
